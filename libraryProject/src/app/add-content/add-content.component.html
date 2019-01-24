@@ -1,0 +1,19 @@
+<div #addNewBook>
+  <label>Book name: </label>
+  <input type="text" [(ngModel)]="oneBook.name">
+  <br>
+  <label>Book author: </label>
+  <input type="text" [(ngModel)]="oneBook.author">
+  <br>
+  <label>Type: </label>
+  <input type="text" [(ngModel)]="oneBook.type">
+  <br>
+  <label>Subject: </label>
+  <input type="text" [(ngModel)]="oneBook.subject">
+  <br>
+  <label>Year of publishing: </label>
+  <input type="text" [(ngModel)]="oneBook.publishingYear">
+  <br>
+    <button (click)="onConfirmAddingBook()">Add new book</button>
+</div>
+  

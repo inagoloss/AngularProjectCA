@@ -1,0 +1,18 @@
+<div #editBook>
+  <label>Book name: </label>
+<input type="text" [(ngModel)]="editingBook.name">
+<br>
+<label>Book author: </label>
+<input type="text" [(ngModel)]="editingBook.author">
+<br>
+<label>Type: </label>
+<input type="text" [(ngModel)]="editingBook.subject">
+<br>
+<label>Book name: </label>
+<input type="text" [(ngModel)]="editingBook.publishingYear">
+<br>
+<label>Book author: </label>
+<input type="text" [(ngModel)]="editingBook.type">
+<br>
+  <button (click)="onSubmitEdit()">Submit changes</button>
+</div> 

@@ -1,0 +1,18 @@
+<div #showBooks>
+  <ul>
+    <li *ngFor="let book of books; index as i">
+      {{book.name}} <br>
+      {{book.author}} <br>
+      {{book.subject}} <br>
+      {{book.type}} <br>
+      {{book.publishingYear}} <br>
+      {{book.numberOfCopies}} <br>
+     <!--{{book.publisherID}} <br>--> 
+      <button (click) = "onEditBook(i)"> Edit</button>
+      <button (click) = "onDeleteBook(book.id,i)">Delete</button>
+    </li>
+  </ul>
+  </div>
+ 
+<hr>
+<button (click) = "onAddBook()">Add book</button>
