@@ -28,6 +28,7 @@ module.exports = {
     let subject = req.body.subject ;
     let publishingYear = req.body.publishingYear ; 
     let type = req.body.type ; 
+    console.log(name + " " + author) ; 
     //treba provjeriti ako je type 'copy' da se broj kopija inkrementira
  	let addBookQuery = "INSERT INTO `books` (`name`, `author`, `subject`, `publishingYear`, `type`)  VALUES ('" +
                             name + "', '" + author + "', '" + subject + "', " + publishingYear + ", '" + type + "')" ; 

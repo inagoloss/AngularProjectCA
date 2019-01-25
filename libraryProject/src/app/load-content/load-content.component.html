@@ -1,18 +1,83 @@
+      
+<div class="numberPlaceHolder"><p>Total Number of books: </p></div>
+<button class="btn btn-dark btn-block addBtn" (click) = "onAddBook()">Add book</button>
 <div #showBooks>
+  
+  <div class="wrapperClass">
   <ul>
-    <li *ngFor="let book of books; index as i">
-      {{book.name}} <br>
-      {{book.author}} <br>
-      {{book.subject}} <br>
-      {{book.type}} <br>
-      {{book.publishingYear}} <br>
-      {{book.numberOfCopies}} <br>
-     <!--{{book.publisherID}} <br>--> 
-      <button (click) = "onEditBook(i)"> Edit</button>
-      <button (click) = "onDeleteBook(book.id,i)">Delete</button>
-    </li>
-  </ul>
+    <li *ngFor="let book of books | paginate: {itemsPerPage: 5, currentPage: p}; index as i">
+     <!-- index as i -->
+      <div class="bookContent">
+        <div class="row">
+      <div class="col-md-4 text-secondary"> 
+        Name:
+      </div> 
+      <div class="col-md-8"> 
+        {{book.name}} 
+      </div>
+    </div>
+   
+      <div class="row">
+      <div class="col-md-4 text-secondary">
+        Author: 
+      </div>
+      <div class="col-md-8">
+        {{book.author}} 
+      </div>
+    </div>
+    
+      <div class="row">
+          <div class="col-md-4 text-secondary">
+      Subject: 
+    </div>
+    <div class="col-md-8">
+      {{book.subject}} 
+    </div>
+  </div>
+      
+      <div class="row">
+          <div class="col-md-4 text-secondary">
+      Type: 
+    </div>
+    <div class="col-md-8"> 
+      {{book.type}}
+    </div>
+  </div> 
+      
+  <div class="row">
+          <div class="col-md-4 text-secondary">
+      Published: 
+    </div>
+    
+    <div class="col-md-8"> 
+      {{book.publishingYear}} 
+    </div>
   </div>
  
-<hr>
-<button (click) = "onAddBook()">Add book</button>
+      <div class="row">
+      <div class="col-md-4 text-secondary">
+      Copies: 
+    </div>
+      <div class="col-md-8"> 
+        {{book.numberOfCopies}} </div>
+      </div>
+      </div>
+   
+      
+      <!--{{book.publisherID}} <br>--> 
+      
+      <div class="d-flex justify-content-center">
+        
+        <button class="btn btn-secondary editBtn" (click) = "onEditBook(i)"> Edit</button>
+        <button class="btn btn-danger dltBtn" (click) = "onDeleteBook(book.id,i)">Delete</button>
+        
+      </div>
+    </li>
+  </ul>
+  <div class="paginationPlaceHolder">
+  <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
+</div>
+</div>
+</div>
+<div class="numberPlaceHolder"><p>Total Number of books: </p></div>
+

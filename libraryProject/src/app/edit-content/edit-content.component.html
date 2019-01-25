@@ -1,18 +1,33 @@
 <div #editBook>
+    <div class="d-flex justify-content-center">
+        <div class="wrapperClass">
+         
+          <div class="form-group">
   <label>Book name: </label>
-<input type="text" [(ngModel)]="editingBook.name">
+<input type="text" class="form-control" [(ngModel)]="editingBook.name">
+</div>
 <br>
+<div class="form-group">
 <label>Book author: </label>
-<input type="text" [(ngModel)]="editingBook.author">
+<input type="text" class="form-control" [(ngModel)]="editingBook.author">
+</div>
 <br>
+<div class="form-group">
 <label>Type: </label>
-<input type="text" [(ngModel)]="editingBook.subject">
+<input type="text" class="form-control" [(ngModel)]="editingBook.subject">
+</div>
 <br>
+<div class="form-group">
 <label>Book name: </label>
-<input type="text" [(ngModel)]="editingBook.publishingYear">
+<input type="text" class="form-control" [(ngModel)]="editingBook.publishingYear">
+</div>
 <br>
+<div class="form-group">
 <label>Book author: </label>
-<input type="text" [(ngModel)]="editingBook.type">
+<input type="text" class="form-control" [(ngModel)]="editingBook.type">
+</div>
 <br>
-  <button (click)="onSubmitEdit()">Submit changes</button>
+  <button class="btn btn-secondary" (click)="onSubmitEdit()">Submit changes</button>
+</div>
+</div>
 </div> 

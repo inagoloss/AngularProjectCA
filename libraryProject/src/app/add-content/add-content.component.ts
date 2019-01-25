@@ -16,6 +16,14 @@ export class AddContentComponent implements OnInit {
   ngOnInit() {
   }
 
+    testFunction(){
+    document.getElementById('hCopy').onclick = showNumberOfCopies;
+  
+  function showNumberOfCopies(){
+    document.getElementById('copyNo').style.visibility="visible"; 
+  }
+}
+  
   onConfirmAddingBook() {
     console.log("New book " + this.oneBook) ; 
     this.manageService.addBook(this.oneBook).toPromise().then((result)=> {

@@ -37,6 +37,6 @@ export class LoadContentComponent implements OnInit {
       this.books.splice(index,1);
     });
   }
-
+ 
 
 }

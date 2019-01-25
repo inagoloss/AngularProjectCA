@@ -1,0 +1,60 @@
+li {
+    list-style-type: none;
+}
+.numberPlaceHolder{
+    text-align: center;
+    color: white;
+}
+.bookContent{
+   font-size: 20px;
+    color: white;
+    padding: 5px 0;
+    text-align: left;
+    margin: 10px 0;
+    border-bottom: 3px solid white;
+    
+}
+
+.wrapperClass {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 375px;
+    border: 5px solid white;
+    margin-bottom: 5px;
+    margin: 5px 25%;
+}
+
+.addBtn{
+    width: 375px;
+    margin: 10px 25%;
+}
+
+.editBtn{
+    width:45%;
+    margin-right: 5%;
+}
+
+.dltBtn{
+    width: 45%;
+    margin-right: 5%;
+}
+
+
+.paginationPlaceHolder{
+    background-color: #6A7B85;
+    margin-left: 10%;
+    padding-right: 10%;
+    border-radius: 5px;
+}
+
+.my-pagination /deep/ .ngx-pagination .current{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #6A7B85;
+    border-bottom: 1px solid #6A7B85;
+  }
+  .my-pagination /deep/ .ngx-pagination li{
+    background-color:  #6A7B85;
+    color: white;
+  }

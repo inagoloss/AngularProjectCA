@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms' ;
+import {NgxPaginationModule} from 'ngx-pagination'; 
 
 import { AppComponent } from './app.component';
 import { LoadContentComponent } from './load-content/load-content.component';
@@ -31,7 +32,8 @@ const appRoutes : Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgxPaginationModule
   ],
   providers: [manageService],
   bootstrap: [AppComponent]
