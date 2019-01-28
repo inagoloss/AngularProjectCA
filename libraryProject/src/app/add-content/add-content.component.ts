@@ -9,12 +9,11 @@ import { Book } from '../book.model' ;
   styleUrls: ['./add-content.component.css']
 })
 export class AddContentComponent implements OnInit {
-  oneBook: Book = new Book(); 
+  oneBook: Book = new Book();   
+  path: string = ""; 
 
   constructor(private manageService: manageService, private router: Router) { }
-
-  ngOnInit() {
-  }
+  
 
   onConfirmAddingBook() {
     console.log("New book " + this.oneBook) ; 
@@ -23,6 +22,11 @@ export class AddContentComponent implements OnInit {
        this.oneBook = new Book() ;
     });
     this.router.navigate(['/loadBooks']);
+
   }
 
+
+ngOnInit() {
+ 
+  }
 }

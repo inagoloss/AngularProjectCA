@@ -53,6 +53,10 @@ export class manageService {
        console.log('route', route);
         return this.http.get(route);
     }
+
+    uploadBook(bookID: number) {
+        
+    }
     
     private handleError(err) {
         return throwError(err);
