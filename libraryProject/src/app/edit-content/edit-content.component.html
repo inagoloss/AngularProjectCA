@@ -1,0 +1,37 @@
+<div #editBook>
+    <div class="d-flex justify-content-center">
+        <div class="wrapperClass">
+         
+          <div class="form-group">
+  <label>Book name: </label>
+<input type="text" class="form-control" [(ngModel)]="editingBook.name">
+</div>
+<br>
+<div class="form-group">
+<label>Book author: </label>
+<input type="text" class="form-control" [(ngModel)]="editingBook.author">
+</div>
+<br>
+<div class="form-group">
+<label>Subject: </label>
+<input type="text" class="form-control" [(ngModel)]="editingBook.subject">
+</div>
+<br>
+<div class="form-group">
+<label>Publishing year </label>
+<input type="text" class="form-control" [(ngModel)]="editingBook.publishingYear">
+</div>
+<br>
+<div class="form-group col-md-6">
+    <label>Type: </label>
+     <select class=form-control [(ngModel)]="editingBook.type">
+      <option >PDF</option>
+    <option id="hCopy">Hardcopy</option>
+  <option>Scan</option> 
+  </select>  
+  </div>
+<br>
+  <button class="btn btn-secondary" (click)="onSubmitEdit()">Submit changes</button>
+</div>
+</div>
+</div>

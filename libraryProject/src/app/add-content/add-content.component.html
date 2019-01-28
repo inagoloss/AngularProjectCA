@@ -1,0 +1,49 @@
+<div #addNewBook>
+<div class="d-flex justify-content-center">
+<div class="wrapperClass">
+ 
+<div *ngIf="badInfo" class="alert alert-warning">
+  <strong> You have to fill in fields </strong>
+</div>
+   
+  <div class="form-group">
+    <label>Book name: </label>
+    <input type="text" class="form-control" [(ngModel)]="oneBook.name" placeholder="Insert the Name of the Book Here" required>
+  </div>
+  <br>
+  <div class="form-group">
+  <label>Book author: </label>
+  <input type="text" class="form-control" [(ngModel)]="oneBook.author" placeholder="Who is the Author of the Book?" required>
+</div>
+<br>
+  <div class="form-group">
+  <label>Year of publishing: </label>
+  <input type="text" class="form-control"[(ngModel)]="oneBook.publishingYear" placeholder="What year has the book been published?" required>
+  </div>
+  <br>
+  <div class="form-group">
+    <label>Subject: </label>
+    <input type="text" class="form-control" [(ngModel)]="oneBook.subject" placeholder="Insert Subjects Here" required>
+  </div>
+  <br>
+            <div class="form-row">
+  <div class="form-group col-md-6">
+  <label>Type: </label>
+   <select class=form-control [(ngModel)]="oneBook.type" required>
+    <option >PDF</option>
+  <option id="hCopy">Hardcopy</option>
+<option>Scan</option> 
+</select>  
+</div>
+<!-- Eksperimentalni, nefunkcionalni field za kolicinu hardCopy knjiga-->
+<div class="form-group col-md-6" id="copyNo">
+    <label>Number of copies: </label>
+    <input type="text" class="form-control" [(ngModel)]="oneBook.type" placeholder="">
+  </div>
+  <!--  <input type="text" class="form-control" [(ngModel)]="oneBook.type">--> 
+  <br>
+</div>
+    <button class="btn btn-secondary" (click)="onConfirmAddingBook()">Add new book</button>
+  </div>
+</div>
+</div>

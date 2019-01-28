@@ -1,0 +1,15 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+    background-color: #6A7B85;
+}
+
+.logoPlaceholder {
+    color: white;
+}
+
+.navbar {
+    border-bottom: 3px solid white;
+}
+.spaceMaker {
+    padding-top: 75px;
+}
