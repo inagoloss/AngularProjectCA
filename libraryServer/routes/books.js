@@ -87,3 +87,21 @@ module.exports = {
     //      });
     // }
 }
+
+app.post('/api/uploads',upload.single('file'),function (req, res) {
+ 
+    console.log('file received');
+    console.log(req);
+    var sql = "UPDATE `books` SET `content` =  '" + req.file.filename +"' WHERE `id`= 1" ;
+  
+    db.query(sql, function(err, result) {
+      console.log('inserted data');
+      if (err) {
+        return res.status(500).send(err);
+    }
+    return res.status(200);
+   });
+
+message = "Successfully! uploaded";
+
+    });
